@@ -99,7 +99,7 @@ if __name__ == "__main__":
         flows = Flows()
 
         for pcap in train_pcaps:
-            for pkt in pcap:
+            for idx, pkt in pcap.iterrows():
                 flow_key = FlowKey()
 
                 if not flow_key.set_key(pkt):
@@ -121,7 +121,7 @@ if __name__ == "__main__":
         valid_flows = Flows()
 
         for pcap in valid_pcaps:
-            for pkt in pcap:
+            for pkt in pcap.iterrows():
                 flow_key = FlowKey()
 
                 if not flow_key.set_key(pkt):
@@ -143,7 +143,7 @@ if __name__ == "__main__":
         test_flows = Flows()
 
         for pcap in test_pcaps:
-            for pkt in pcap:
+            for pkt in pcap.iterrows():
                 flow_key = FlowKey()
 
                 if not flow_key.set_key(pkt):
