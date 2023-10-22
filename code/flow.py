@@ -19,7 +19,7 @@ class FlowKey:
             self.sid = pkt["ipaddr SRC_IP"]
             self.did = pkt["ipaddr DST_IP"]
             self.protocol = 'TCP'
-            self.additional = (pkt["SRC_PORT"], pkt["DST_PORT"])
+            self.additional = (pkt["uint16 SRC_PORT"], pkt["uint16 DST_PORT"])
             return True
         except:
             return False
