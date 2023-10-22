@@ -15,35 +15,15 @@ class FlowKey:
         return str(self.sid) + '_' + str(self.did) + '_' + str(self.protocol) + '_' + str(self.additional)
 
     def set_key(self, pkt):
-        if "zbee_nwk" in dir(pkt):
-            try:
-                self.sid = pkt.wpan.src16
-                self.did = pkt.wpan.dst16
-                self.protocol = 'ZBEE_NWK'
-                self.additional = pkt.wpan.dst_pan
-                return True
-            except:
-                return False
-        elif "udp" in dir(pkt):
-            try:
-                self.sid = pkt.ip.src
-                self.did = pkt.ip.dst
-                self.protocol = 'UDP'
-                self.additional = (pkt.udp.srcport, pkt.udp.dstport)
-                return True
-            except:
-                return False
-        elif "tcp" in dir(pkt):
-            try:
-                self.sid = pkt.ip.src
-                self.did = pkt.ip.dst
-                self.protocol = 'TCP'
-                self.additional = (pkt.tcp.srcport, pkt.tcp.dstport)
-                return True
-            except:
-                return False
-        else:
+        try:
+            self.sid = pkt["ipaddr SRC_IP"]
+            self.did = pkt["ipaddr DST_IP"]
+            self.protocol = 'TCP'
+            self.additional = (pkt["SRC_PORT"], pkt["DST_PORT"])
+            return True
+        except:
             return False
+
 
 class FlowValue:
     def __init__(self):

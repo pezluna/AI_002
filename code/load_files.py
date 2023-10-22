@@ -21,7 +21,7 @@ def load_flows(path):
 def load_files(path):
     pcaps = []
     for file in os.listdir(path):
-        if file.endswith(".pcap"):
+        if file.endswith(".csv"):
             pcap = pyshark.FileCapture(path + file, include_raw=True, use_json=True)
 
             pcaps.append(pcap)

@@ -58,7 +58,7 @@ if __name__ == "__main__":
     if not os.path.exists("./data/") or args.reset:
         logger.info(f"Creating Flow files...")
         
-        # 학습용 pcap 불러오기
+        # 학습용 csv 불러오기
         train_folders = []
         train_pcaps = []
 
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 train_pcaps.append(pcap)
         logger.info(f"Loaded train pcaps - {len(train_pcaps)}")
 
-        # 검증용 pcap 불러오기
+        # 검증용 csv 불러오기
         valid_folders = []
         valid_pcaps = []
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
                 valid_pcaps.append(pcap)
         logger.info(f"Loaded valid pcaps - {len(valid_pcaps)}")
 
-        # 테스트용 pcap 불러오기
+        # 테스트용 csv 불러오기
         test_folders = []
         test_pcaps = []
 
