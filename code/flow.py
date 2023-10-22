@@ -4,6 +4,17 @@ import logging
 
 logger = logging.getLogger("logger")
 
+from datetime import datetime
+
+def convert_to_timestamp(date_string):
+    # 주어진 형식에 따라 문자열을 datetime 객체로 변환
+    dt = datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S.%f")
+    
+    # datetime 객체를 타임스탬프로 변환
+    timestamp = dt.timestamp()
+    
+    return timestamp
+
 class FlowKey:
     def __init__(self):
         self.sid = None
@@ -42,7 +53,7 @@ class FlowValue:
     def set_raw_value(self, pkt, flow_key):
         self.protocol = flow_key.protocol
         
-        self.raw_time = float(pkt.sniff_timestamp)
+        self.raw_time = pkt["time TIME_LAST"]
         self.length = pkt.length
 
 class Flows:
