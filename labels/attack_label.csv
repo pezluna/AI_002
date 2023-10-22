@@ -1,0 +1,6 @@
+﻿id,protocol,additional,trustable
+# [ipv4],[protocol],[port],[[benign]]
+
+10.0.42.155,TCP,*,mali
+10.0.42.10,TCP,*,benign
+10.0.42.1,TCP,*,benign

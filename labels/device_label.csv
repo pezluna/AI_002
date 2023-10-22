@@ -1,0 +1,21 @@
+﻿id,protocol,additional,name,type,vendor
+0x1aa9,ZBEE_NWK,0x6567,SmartThings Multi Purpose Sensor,Sensor,Samsung
+0x9a65,ZBEE_NWK,0x6567,Aqara Switch,Actuator,Aqara
+0x6822,ZBEE_NWK,0xb454,Aqara Door Sensor,Sensor,Aqara
+0xdab7,ZBEE_NWK,0xb454,Aqara Temperature Sensor,Sensor,Aqara
+0x02b0,ZBEE_NWK,0x8fbd,Philips Hue White,Actuator,Philips
+0xe28a,ZBEE_NWK,0x8fbd,Philips Hue White,Actuator,Philips
+0x0002,ZBEE_NWK,0x1101,SmartThings Smart Bulb,Actuator,Samsung
+0x0005,ZBEE_NWK,0x1101,SmartThings Smart Bulb,Actuator,Samsung
+0x16e2,ZBEE_NWK,0x8c9a,AeoTec Button,Sensor,AeoTec
+0x72db,ZBEE_NWK,0x8c9a,AeoTec Motion Sensor,Sensor,AeoTec
+0x6214,ZBEE_NWK,0x8c9a,AeoTec Multipurpose Sensor,Sensor,AeoTec
+0xde1d,ZBEE_NWK,0x8c9a,AeoTec Water Leak Sensor,Sensor,AeoTec
+0x0a5b,ZBEE_NWK,0x8c9a,Sengled Smart Plug,Actuator,Sengled
+0xe4ff,ZBEE_NWK,0x8c9a,Sengled Smart Plug,Actuator,Sengled
+0x33bc,ZBEE_NWK,0x8c9a,SmartThings Button,Sensor,Samsung
+0x2c0a,ZBEE_NWK,0x8c9a,SmartThings Smart Bulb,Actuator,Samsung
+0x1c67,ZBEE_NWK,0x8c9a,SmartThings Smart Bulb,Actuator,Samsung
+0x93d7,ZBEE_NWK,0x8c9a,SmartThings Smart Bulb,Actuator,Samsung
+0x42e0,ZBEE_NWK,0x8c9a,Sonoff Smart Plug,Actuator,Sonoff
+0x3331,ZBEE_NWK,0x8c9a,Sonoff Smart Plug,Actuator,Sonoff
