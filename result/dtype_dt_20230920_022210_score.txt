@@ -1,2 +1,0 @@
-Class 0: Precision: 0.87, Recall: 0.98, F1: 0.92
-Class 1: Precision: 0.96, Recall: 0.69, F1: 0.80

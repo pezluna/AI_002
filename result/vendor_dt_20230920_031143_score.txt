@@ -1,6 +1,0 @@
-Class 0: Precision: 0.73, Recall: 0.80, F1: 0.77
-Class 1: Precision: 0.95, Recall: 0.75, F1: 0.84
-Class 2: Precision: 0.86, Recall: 0.85, F1: 0.86
-Class 3: Precision: 0.79, Recall: 0.92, F1: 0.85
-Class 4: Precision: 0.62, Recall: 0.15, F1: 0.24
-Class 5: Precision: 0.74, Recall: 0.45, F1: 0.56
