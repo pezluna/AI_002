@@ -1,6 +1,6 @@
 import os
 import sys
-import pyshark
+import pandas as pd
 import pickle
 import logging
 
@@ -22,7 +22,7 @@ def load_files(path):
     pcaps = []
     for file in os.listdir(path):
         if file.endswith(".csv"):
-            pcap = pyshark.FileCapture(path + file, include_raw=True, use_json=True)
+            pcap = pd.read_csv(path + file)
 
             pcaps.append(pcap)
     return pcaps
