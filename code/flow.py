@@ -54,7 +54,7 @@ class FlowValue:
         self.protocol = flow_key.protocol
         
         self.raw_time = pkt["time TIME_LAST"]
-        self.length = pkt.length
+        self.length = pkt["uint64 BYTES"]
 
 class Flows:
     def __init__(self):
