@@ -215,9 +215,9 @@ def extract_attack_features_b(flows, labels):
                     cond1 = key.sid == labels[j][0]
                     cond2 = key.did == labels[k][0]
                     cond3 = key.protocol == labels[j][1] and key.protocol == labels[k][1]
-                    if labels[i][2] == "*" and labels[k][2] == key.additional[1]:
+                    if labels[j][2] == "*" and labels[k][2] == key.additional[1]:
                         cond4 = True
-                    elif labels[i][2] == key.additional[0] and labels[k][2] == "*":
+                    elif labels[j][2] == key.additional[0] and labels[k][2] == "*":
                         cond4 = True
                     else:
                         cond4 = key.additional == (labels[j][2], labels[k][2])
