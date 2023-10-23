@@ -148,6 +148,7 @@ def extract_attack_features(flows, labels):
             X_tmp = []
             y_tmp = None
 
+            is_benign = True
             if "10.0.42.155" in (key.sid, key.did):
                 is_benign = False
             
@@ -189,6 +190,7 @@ def extract_attack_features_b(flows, labels):
             X_tmp = []
             y_tmp = None
 
+            is_benign = True
             if "10.0.42.155" in (key.sid, key.did):
                 is_benign = False
             
