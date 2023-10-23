@@ -1,4 +1,5 @@
 import logging
+import pdb
 
 logger = logging.getLogger("logger")
 
@@ -153,6 +154,7 @@ def extract_attack_features(flows, labels):
                     if j == k:
                         continue
                     
+                    pdb.set_trace()
                     cond1 = key.sid == labels[j][0]
                     cond2 = key.did == labels[k][0]
                     cond3 = key.protocol == labels[j][1] and key.protocol == labels[k][1]
