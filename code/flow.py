@@ -53,8 +53,8 @@ class FlowValue:
     def set_raw_value(self, pkt, flow_key):
         self.protocol = flow_key.protocol
         
-        self.raw_time = pkt["time TIME_LAST"]
-        self.length = pkt["uint64 BYTES"]
+        self.raw_time = float(pkt["time TIME_LAST"])
+        self.length = int(pkt["uint64 BYTES"])
 
 class Flows:
     def __init__(self):
