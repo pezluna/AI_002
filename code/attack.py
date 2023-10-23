@@ -195,6 +195,8 @@ def attack_learn(flows, valid_flows, labels, algorithm):
 
     logger.debug(f"X shape: {X.shape}")
     logger.debug(f"y shape: {y.shape}")
+    logger.debug(f"number of benign: {len(y[y == 1])}")
+    logger.debug(f"number of attack: {len(y[y == 0])}")
     
     model = algorithm_func[algorithm](X, y, valid_X, valid_y)
 
