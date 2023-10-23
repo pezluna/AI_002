@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
         for pcap in train_pcaps:
             for idx, pkt in pcap.iterrows():
-                if idx > 1000:
+                if idx > 50:
                     break
                 flow_key = FlowKey()
 
@@ -124,7 +124,7 @@ if __name__ == "__main__":
 
         for pcap in valid_pcaps:
             for idx, pkt in pcap.iterrows():
-                if idx > 1000:
+                if idx > 50:
                     break
                 flow_key = FlowKey()
 
@@ -148,7 +148,7 @@ if __name__ == "__main__":
 
         for pcap in test_pcaps:
             for idx, pkt in pcap.iterrows():
-                if idx > 1000:
+                if idx > 50:
                     break
                 flow_key = FlowKey()
 
