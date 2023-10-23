@@ -101,6 +101,8 @@ if __name__ == "__main__":
         for pcap in train_pcaps:
             logger.debug(f"Creating flows from {pcap}...")
             for idx, pkt in pcap.iterrows():
+                if idx > 5000:
+                    break
                 flow_key = FlowKey()
 
                 if not flow_key.set_key(pkt):
