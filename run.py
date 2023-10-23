@@ -99,6 +99,7 @@ if __name__ == "__main__":
         flows = Flows()
 
         for pcap in train_pcaps:
+            logger.debug(f"Creating flows from {pcap}...")
             for idx, pkt in pcap.iterrows():
                 flow_key = FlowKey()
 
