@@ -160,6 +160,8 @@ def extract_attack_features(flows, labels):
                         cond4 = True
                     elif labels[i][2] == key.additional[0] and labels[k][2] == "*":
                         cond4 = True
+                    elif labels[i][2] == "*" and labels[k][2] == "*":
+                        cond4 = True
                     else:
                         cond4 = key.additional == (labels[j][2], labels[k][2])
 
@@ -222,11 +224,13 @@ def extract_attack_features_b(flows, labels):
                         cond4 = True
                     elif labels[j][2] == key.additional[0] and labels[k][2] == "*":
                         cond4 = True
+                    elif labels[j][2] == "*" and labels[k][2] == "*":
+                        cond4 = True
                     else:
                         cond4 = key.additional == (labels[j][2], labels[k][2])
                     logger.debug(f"key.additional: {key.additional}, labels[j][2]: {labels[j][2]}, labels[k][2]: {labels[k][2]}")
                     logger.debug(f"cond1: {cond1}, cond2: {cond2}, cond3: {cond3}, cond4: {cond4}")
-                    input()
+                    # input()
                     if cond1 and cond2 and cond3 and cond4:
                         is_benign = True
                         break
